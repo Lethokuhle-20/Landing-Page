@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Decor Delights</title>
+    <style>
+        body {
+            background-color: burlywood;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            color: tan;
+            border: 2px solid cornsilk;
+            padding: 20px;
+            background-color: cornsilk;
+            margin: 20px auto;
+            max-width: 80%;
+        }
+        .navbar-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 0;
+        }
+        .navbar-icons img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .homeimage {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            opacity: 0.8;
+            display: block;
+            object-fit: cover;
+            filter: brightness(100%) contrast(90%);
+            position: relative;
+        }
+        .homeimage-container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .homeimage-container .homeimage::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Darken the image for better text visibility */
+        }
+        .overlay-text, .slogan {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            width: 80%;
+        }
+        .overlay-text {
+            top: 40%;
+            font-size: 24px;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .slogan {
+            top: 50%;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .overlay-boxes {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .box {
+            width: 150px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 2px solid tan;
+            margin: 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .box:hover {
+            background-color: rgba(255, 194, 128, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header style="font-size: 24px;"><b>Home Decor Delights</b></header>
+        <div class="navbar-icons">
+            <i><img src="./images/searc-icon.jpg" alt="" width="20px"></i>
+            <i><img src="./images/heart-icon.jpg" alt="" width="20px"></i>
+            <i><img src="./images/shopping-cart.jpg" alt="" width="25px"></i>
+        </div>
+    </div>
+    <div class="homeimage-container">
+        <img class="homeimage" src="./images/homepage.jpg" alt="homepage image">
+        <div class="overlay-text"><b>Turn A House Into A Home</b></div>
+        <div class="slogan">Making your home feel cozy and welcoming with our delightful decor</div>
+        <div class="overlay-boxes">
+            <div class="box">Talk to us</div>
+            <div class="box">See our designs</div>
+        </div>
+    </div>
+</body>
+</html>

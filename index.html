@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home Decor Delights - Making your home feel cozy and welcoming with our delightful decor">
+    <meta name="keywords" content="home decor, interior design, cozy home, welcoming home, home accessories">
+    <meta name="author" content="Home Decor Delights">
     <title>Home Decor Delights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: burlywood;
@@ -19,23 +23,28 @@
             background-color: cornsilk;
             margin: 20px auto;
             max-width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .navbar-icons {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            padding: 10px 0;
+            gap: 20px;
+            padding: 15px 0;
         }
         .navbar-icons img {
             width: 24px;
             height: 24px;
             cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .navbar-icons img:hover {
+            transform: scale(1.2)
         }
         .homeimage {
             max-width: 100%;
             height: auto;
             margin: 0 auto;
-            opacity: 0.8;
+            opacity: 0.9;
             display: block;
             object-fit: cover;
             filter: brightness(100%) contrast(90%);
@@ -81,40 +90,118 @@
             left: 50%;
             transform: translateX(-50%);
             display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .box {
-            width: 150px;
+            width: 160px;
             height: 50px;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.8);
             border: 2px solid tan;
-            margin: 0 10px;
+            margin: 0 15px;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .box:hover {
             background-color: rgba(255, 194, 128, 0.9);
+            transform: scale(1.05);
+        }
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: #8B4513; /* Dark brown color */
+            opacity: 0.8;
+        }
+        .circle.small {
+            width: 150px;
+            height: 150px;
+        }
+        .circle.medium {
+            width: 250px;
+            height: 250px;
+        }
+        .circle.large {
+            width: 400px;
+            height: 400px;
+        }
+        /* Positioning the circles around the home image */
+        .circle1 {
+            top: 50px;
+            left: 150px;
+        }
+        .circle2 {
+            top: -15px;
+            right: -150px;
+        }
+        .circle3 {
+            bottom: -50px;
+            left:-150px;
+        }
+        .circle4 {
+            bottom: -50px;
+            right: 100px;
+        }
+        @media (max-width: 768px) {
+            .overlay-text, .slogan {
+                font-size: 18px;
+            }
+            .overlay-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        footer {
+            text-align: center;
+            padding: 5px;
+            background-color: #FFF8DC;
+            border-top: 2px solid #FFE4C4;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #8B4513;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header style="font-size: 24px;"><b>Home Decor Delights</b></header>
-        <div class="navbar-icons">
-            <i><img src="./images/searc-icon.jpg" alt="" width="20px"></i>
-            <i><img src="./images/heart-icon.jpg" alt="" width="20px"></i>
-            <i><img src="./images/shopping-cart.jpg" alt="" width="25px"></i>
-        </div>
+        <header style="font-size: 24px; font-family: 'Playfair Display', Tahoma, Geneva, Verdana, sans-serif;"><b>Home Decor Delights</b></header>
+        <nav class="navbar-icons">
+            <a href="#"><img src="./images/searc-icon.jpg" alt="Search icon" width="24px"></a>
+            <a href="#"><img src="./images/heart-icon.jpg" alt="Heart icon" width="24px"></a>
+            <a href="#"><img src="./images/shopping-cart.jpg" alt="Shopping cart icon" width="24px"></a>
+        </nav>
     </div>
-    <div class="homeimage-container">
-        <img class="homeimage" src="./images/homepage.jpg" alt="homepage image">
+    <main class="homeimage-container">
+        <img class="homeimage" src="./images/homepage.jpg" alt="Homepage image">
         <div class="overlay-text"><b>Turn A House Into A Home</b></div>
         <div class="slogan">Making your home feel cozy and welcoming with our delightful decor</div>
         <div class="overlay-boxes">
-            <div class="box">Talk to us</div>
-            <div class="box">See our designs</div>
+            <div class="box">Talk to Us</div>
+            <div class="box">See Our Designs</div>
         </div>
-    </div>
+        <!-- Adding circles -->
+        <div class="circle large circle1"></div>
+        <div class="circle medium circle2"></div>
+        <div class="circle medium circle3"></div>
+        <div class="circle large circle4"></div>
+    </main>
+    <footer>
+        <p>Contact us: <a href="mailto:info@homedecordelights.com">info@homedecordelights.com</a></p>
+        <p>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Follow Us on Social Media</a>
+        </p>
+    </footer>
 </body>
 </html>
+
